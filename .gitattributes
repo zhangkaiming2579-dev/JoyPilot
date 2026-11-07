@@ -1,0 +1,6 @@
+* text=auto
+*.swift text eol=lf
+*.sh text eol=lf
+# Preserve upstream formatting in vendored hardware sources.
+Sources/JoyPilot/Hardware/JoyConSwift/** whitespace=-blank-at-eol
+*.png binary

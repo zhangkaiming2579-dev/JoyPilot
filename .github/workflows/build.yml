@@ -1,0 +1,16 @@
+name: macOS build and core tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: macos-15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test input routing, fractional scroll, gyro math, and shortcut plans
+        run: swift test
+      - name: Build application
+        run: scripts/build-app.sh
